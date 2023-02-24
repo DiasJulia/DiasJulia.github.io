@@ -1,0 +1,141 @@
+body {
+    background: url('../assets/background-2.png'), #363636;
+    color: #fff;
+    background-size: 100%;
+    margin: 0;
+}
+
+body::before {
+    background-color: #363636;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    padding: 0em max(calc(100vw - 1200px)/2, 1rem);
+}
+
+.w-50 {
+    width: 50%;
+}
+
+#bubbles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+}
+
+.bubble {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: radial-gradient(65.77% 65.77% at 65.77% 42.28%, #56FFEB 0%, rgba(0, 2, 16, 0) 100%), #008B7A;
+    box-shadow: 0px 0px 40px #85F0DD, inset 9.74px 15.58px 19.47px rgba(20, 216, 204, 0.95), inset 0px 1.95px 9.74px rgba(255, 255, 255, 0.58);
+}
+
+#bubble-1 {
+    transition: all 0.2s ease;
+    float: left;
+    margin-top: 45%;
+    animation-name: bubble-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#bubble-1 .bubble {
+    height: 128px;
+    width: 128px;
+    background: url('../assets/icon-github.png'), radial-gradient(65.77% 65.77% at 65.77% 42.28%, #56FFEB 0%, rgba(0, 2, 16, 0) 100%), #008B7A;
+    background-size: 100%;
+}
+
+#bubble-1:hover {
+    transform: scale(1.1);
+}
+
+#bubble-2 {
+    transition: all 0.2s ease;
+    float: left;
+    animation-name: bubble-2;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+
+#bubble-2:hover {
+    transform: scale(1.1);
+}
+
+#bubble-2 .bubble {
+    height: 156px;
+    width: 156px;
+    background: url('../assets/icon-linkedin.png'), radial-gradient(65.77% 65.77% at 65.77% 42.28%, #56FFEB 0%, rgba(0, 2, 16, 0) 100%), #008B7A;
+    background-size: 100%;
+}
+
+#bubble-3 {
+    transition: all 0.2s ease;
+    display: block;
+    position: absolute;
+}
+
+#bubble-3:hover {
+    margin-top: -1%;
+}
+
+#bubble-3 .bubble {
+    height: 112px;
+    width: 112px;
+}
+
+h1 {
+    font-family: 'Imprima';
+    font-size: 3em;
+}
+
+p {
+    font-family: 'Imprima';
+    font-size: 1.2em;
+}
+
+button {
+    transition: all 1s ease;
+    background: linear-gradient(94.07deg, #274F6B 0%, #008B7A 100%), #363636;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: 'Imprima';
+    font-size: 1.5em;
+}
+
+button:hover {
+    background: linear-gradient(0deg, #274F6B 0%, #008B7A 100%), #363636;
+    cursor: pointer;
+}
+
+@keyframes bubble-1 {
+    0% {
+        margin-top: 45%
+    }
+    50% {
+        margin-top: 50%;
+    }
+    100% {
+        margin-top: 45%;
+    }
+}
+
+@keyframes bubble-2 {
+    0% {
+        margin-top: 5%;
+    }
+    50% {
+        margin-top: 10%;
+    }
+    100% {
+        margin-top: 5%;
+    }
+}
