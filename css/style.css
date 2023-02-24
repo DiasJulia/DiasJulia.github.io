@@ -1,5 +1,5 @@
 body {
-    background: url('../assets/background-2.png'), #363636;
+    background: url('../assets/background-3.png'), #363636;
     color: #fff;
     background-size: 100%;
     margin: 0;
@@ -11,9 +11,10 @@ body::before {
 
 .d-flex {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     height: 100vh;
     align-items: center;
+    justify-content: center;
     padding: 0em max(calc(100vw - 1200px)/2, 1rem);
 }
 
@@ -26,7 +27,8 @@ body::before {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 500px;
+    height: 300px;
+    min-width: 300px;
 }
 
 .bubble {
@@ -89,6 +91,10 @@ body::before {
 #bubble-3 .bubble {
     height: 112px;
     width: 112px;
+}
+
+#intro {
+    min-width: 300px;
 }
 
 h1 {
