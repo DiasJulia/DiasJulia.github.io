@@ -9,6 +9,10 @@ body::before {
     background-color: #363636;
 }
 
+.main-frame{
+    padding: 0em max(calc(100vw - 1200px)/2, 1rem);
+}
+
 .d-flex {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -97,9 +101,18 @@ body::before {
     min-width: 300px;
 }
 
+*{
+    font-family: 'Imprima', sans-serif;
+}
+
 h1 {
     font-family: 'Imprima';
     font-size: 3em;
+}
+
+h2 {
+    font-family: 'Imprima';
+    font-size: 2em;
 }
 
 p {
@@ -144,4 +157,37 @@ button:hover {
     100% {
         margin-top: 5%;
     }
+}
+
+.iframe-container {
+    width: 60%; 
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe {
+    transform-origin: top left;
+    transform: scale(0.5);
+    border-radius: 8px;
+  }
+
+.project{
+    display: flex;
+    align-items: center;
+}
+
+.project-description{
+    padding: 1em;
+    backdrop-filter: blur(50px);
+    background-color: rgba(54, 54, 54, 0.15);
+    width: 25vw;
+}
+
+.project-description:nth-child(odd){
+    margin-right: -5em;
+    z-index: 1;
+}
+
+.project-description:nth-child(even){
+    margin-left: -5em;
 }
